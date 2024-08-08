@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Radio Player</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        .radio-player {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .radio-player button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="radio-player">
+        <!-- <h1>Simple Radio Player</h1> -->
+        <audio id="radio" controls>
+            <source src="http://ec1.yesstreaming.net:3770/stream" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+         <!--
+        <br>
+        <button onclick="playRadio()">Play</button>
+        <button onclick="pauseRadio()">Pause</button>
+        -->
+    </div>
+
+    <script>
+        const radio = document.getElementById('radio');
+
+        function playRadio() {
+            radio.play();
+        }
+
+        function pauseRadio() {
+            radio.pause();
+        }
+    </script>
+</body>
+</html>
